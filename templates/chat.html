@@ -122,18 +122,18 @@
 </div>
 </div>
 <template id="template-normal">
-<a href="detail_normal.html?from=1" class="block">
+<a href="#" data-slot="link" class="block">
 <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-md border border-gray-100 dark:border-gray-700 overflow-hidden">
 <div class="px-4 py-3 flex items-center gap-2 bg-blue-50 dark:bg-blue-900/20 border-b border-blue-100 dark:border-blue-900/30">
 <span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span>
-<span class="text-blue-900 dark:text-blue-200 text-sm font-semibold">正常取件</span>
+<span data-slot="status" class="text-blue-900 dark:text-blue-200 text-sm font-semibold">正常取件</span>
 </div>
 <div class="px-5 py-6 flex flex-col items-center justify-center text-center bg-white dark:bg-gray-800">
-<div class="text-primary tracking-tight text-[42px] font-black leading-none mb-1">8-2-3011</div>
+<div data-slot="code" class="text-primary tracking-tight text-[42px] font-black leading-none mb-1">8-2-3011</div>
 <p class="text-gray-500 dark:text-gray-400 text-xs font-medium uppercase tracking-widest mt-2">取件码</p>
 </div>
 <div class="relative w-full h-28 bg-gray-200">
-<div class="w-full h-full bg-center bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCcJLbuntMe7u8qtIB_M1T2HTRlwPGW18vXa7Q-NO9zCdO3p6Fd2WdkBWlK63j7LdXsEW-4c6697xdzGCOYnzkE5D4gRfZ6oHDNQ4B8G43tOIGRa71_hG76h4Umosthc-pFB8mirGl2JIOjIKnOw3UnJvlCkBvFKnZBGKBorCW6GBjcx5-ONsgZCYn7ttx3TjjvlMBhi8FxTUYXz0VgY0wUxYjfBxiiJspKbYRdNvJ67kiQaKfu7VmsWJMU5vqYgLf64xZluBAwosM");'></div>
+<div data-slot="map" class="w-full h-full bg-center bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCcJLbuntMe7u8qtIB_M1T2HTRlwPGW18vXa7Q-NO9zCdO3p6Fd2WdkBWlK63j7LdXsEW-4c6697xdzGCOYnzkE5D4gRfZ6oHDNQ4B8G43tOIGRa71_hG76h4Umosthc-pFB8mirGl2JIOjIKnOw3UnJvlCkBvFKnZBGKBorCW6GBjcx5-ONsgZCYn7ttx3TjjvlMBhi8FxTUYXz0VgY0wUxYjfBxiiJspKbYRdNvJ67kiQaKfu7VmsWJMU5vqYgLf64xZluBAwosM");'></div>
 <div class="absolute inset-0 flex items-center justify-center">
 <span class="material-symbols-outlined text-red-500 text-4xl" style="font-variation-settings: 'FILL' 1;">location_on</span>
 </div>
@@ -142,24 +142,38 @@
 </a>
 </template>
 <template id="template-closed">
-<a href="detail_closed.html?from=2" class="block">
+<a href="#" data-slot="link" class="block">
 <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-md border border-gray-100 dark:border-gray-700 overflow-hidden">
 <div class="px-4 py-3 flex items-center gap-2 bg-yellow-50 dark:bg-yellow-900/20 border-b border-yellow-100 dark:border-yellow-900/30">
 <span class="material-symbols-outlined text-yellow-600 text-lg" style="font-variation-settings: 'FILL' 1;">warning</span>
-<span class="text-yellow-900 dark:text-yellow-200 text-sm font-semibold">驿站已关门</span>
+<span data-slot="status" class="text-yellow-900 dark:text-yellow-200 text-sm font-semibold">驿站已关门</span>
 </div>
 <div class="px-5 py-6 flex flex-col items-center justify-center text-center bg-white dark:bg-gray-800">
-<div class="text-yellow-500 dark:text-yellow-400 tracking-tight text-[42px] font-black leading-none mb-1">8-2-3011</div>
+<div data-slot="code" class="text-yellow-500 dark:text-yellow-400 tracking-tight text-[42px] font-black leading-none mb-1">8-2-3011</div>
 <p class="text-gray-500 dark:text-gray-400 text-xs font-medium uppercase tracking-widest mt-2">取件码</p>
 </div>
 <div class="relative w-full h-28 bg-gray-200">
-<div class="w-full h-full bg-center bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCcJLbuntMe7u8qtIB_M1T2HTRlwPGW18vXa7Q-NO9zCdO3p6Fd2WdkBWlK63j7LdXsEW-4c6697xdzGCOYnzkE5D4gRfZ6oHDNQ4B8G43tOIGRa71_hG76h4Umosthc-pFB8mirGl2JIOjIKnOw3UnJvlCkBvFKnZBGKBorCW6GBjcx5-ONsgZCYn7ttx3TjjvlMBhi8FxTUYXz0VgY0wUxYjfBxiiJspKbYRdNvJ67kiQaKfu7VmsWJMU5vqYgLf64xZluBAwosM");'></div>
+<div data-slot="map" class="w-full h-full bg-center bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCcJLbuntMe7u8qtIB_M1T2HTRlwPGW18vXa7Q-NO9zCdO3p6Fd2WdkBWlK63j7LdXsEW-4c6697xdzGCOYnzkE5D4gRfZ6oHDNQ4B8G43tOIGRa71_hG76h4Umosthc-pFB8mirGl2JIOjIKnOw3UnJvlCkBvFKnZBGKBorCW6GBjcx5-ONsgZCYn7ttx3TjjvlMBhi8FxTUYXz0VgY0wUxYjfBxiiJspKbYRdNvJ67kiQaKfu7VmsWJMU5vqYgLf64xZluBAwosM");'></div>
 <div class="absolute inset-0 flex items-center justify-center">
 <span class="material-symbols-outlined text-red-500 text-4xl" style="font-variation-settings: 'FILL' 1;">location_on</span>
 </div>
 </div>
 </div>
 </a>
+</template>
+<template id="template-loading">
+<div class="flex gap-3 items-start w-full animate-pulse">
+<div class="w-10 h-10 shrink-0 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-primary">smart_toy</span>
+</div>
+<div class="px-4 py-3 rounded-2xl rounded-tl-sm bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 shadow-sm flex items-center">
+<div class="flex gap-1">
+<div class="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="animation-delay: 0s"></div>
+<div class="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="animation-delay: 0.2s"></div>
+<div class="w-2 h-2 bg-gray-400 rounded-full animate-bounce" style="animation-delay: 0.4s"></div>
+</div>
+</div>
+</div>
 </template>
 <template id="template-error">
 <div class="bg-white dark:bg-gray-800 rounded-2xl rounded-tl-sm border border-gray-100 dark:border-gray-700 overflow-hidden flex flex-col support-card-shadow">
@@ -200,6 +214,41 @@
         "3": "template-error"
     };
 
+    // Step 1: Define Data Contract
+    const mockAgentResponse = (userInput) => {
+        if (userInput.includes("1") || userInput.includes("取件")) {
+            return {
+                status: "success",
+                template: "normal",
+                data: {
+                    pickupCode: "8-2-3011",
+                    statusText: "正常取件",
+                    stationName: "北门菜鸟驿站",
+                    mapImageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuCcJLbuntMe7u8qtIB_M1T2HTRlwPGW18vXa7Q-NO9zCdO3p6Fd2WdkBWlK63j7LdXsEW-4c6697xdzGCOYnzkE5D4gRfZ6oHDNQ4B8G43tOIGRa71_hG76h4Umosthc-pFB8mirGl2JIOjIKnOw3UnJvlCkBvFKnZBGKBorCW6GBjcx5-ONsgZCYn7ttx3TjjvlMBhi8FxTUYXz0VgY0wUxYjfBxiiJspKbYRdNvJ67kiQaKfu7VmsWJMU5vqYgLf64xZluBAwosM",
+                    detailUrl: "detail_normal.html"
+                }
+            };
+        } else if (userInput.includes("2") || userInput.includes("关门")) {
+            return {
+                status: "success",
+                template: "closed",
+                data: {
+                    pickupCode: "8-2-3011",
+                    statusText: "驿站已关门",
+                    stationName: "北门菜鸟驿站",
+                    mapImageUrl: "https://lh3.googleusercontent.com/aida-public/AB6AXuCcJLbuntMe7u8qtIB_M1T2HTRlwPGW18vXa7Q-NO9zCdO3p6Fd2WdkBWlK63j7LdXsEW-4c6697xdzGCOYnzkE5D4gRfZ6oHDNQ4B8G43tOIGRa71_hG76h4Umosthc-pFB8mirGl2JIOjIKnOw3UnJvlCkBvFKnZBGKBorCW6GBjcx5-ONsgZCYn7ttx3TjjvlMBhi8FxTUYXz0VgY0wUxYjfBxiiJspKbYRdNvJ67kiQaKfu7VmsWJMU5vqYgLf64xZluBAwosM",
+                    detailUrl: "detail_closed.html"
+                }
+            };
+        } else {
+            return {
+                status: "error",
+                template: "error",
+                data: {}
+            };
+        }
+    };
+
     const showChat = () => {
         if (!chatView.classList.contains("hidden")) {
             return;
@@ -224,21 +273,65 @@
         chatMessages.appendChild(wrapper);
     };
 
-    const addAssistantTemplate = (templateId) => {
+    // Step 3: Render Engine
+    const renderCard = (response) => {
+        const templateId = `template-${response.template}`;
+        const template = document.getElementById(templateId);
+        if (!template) return null;
+
+        const clone = template.content.cloneNode(true);
+
+        // For error template or others without data slots, just return clone
+        if (response.template === "error") {
+            return clone;
+        }
+
+        const codeEl = clone.querySelector('[data-slot="code"]');
+        const statusEl = clone.querySelector('[data-slot="status"]');
+        const mapEl = clone.querySelector('[data-slot="map"]');
+        const linkEl = clone.querySelector('[data-slot="link"]');
+
+        if (codeEl && response.data.pickupCode) codeEl.textContent = response.data.pickupCode;
+        if (statusEl && response.data.statusText) statusEl.textContent = response.data.statusText;
+        if (mapEl && response.data.mapImageUrl) mapEl.style.backgroundImage = `url('${response.data.mapImageUrl}')`;
+        
+        if (linkEl && response.data.detailUrl) {
+            // Construct dynamic link
+            const params = new URLSearchParams();
+            params.set("code", response.data.pickupCode);
+            params.set("status", response.data.statusText);
+            
+            // Add 'from' parameter for back navigation compatibility
+            const fromVal = response.template === "normal" ? "1" : (response.template === "closed" ? "2" : "");
+            if (fromVal) params.set("from", fromVal);
+            
+            linkEl.href = `${response.data.detailUrl}?${params.toString()}`;
+        }
+
+        return clone;
+    };
+
+    const addAssistantMessage = (contentNode) => {
+        if (!contentNode) return;
+        
         const wrapper = document.createElement("div");
         wrapper.className = "flex gap-3 items-start w-full";
+        
         const avatar = document.createElement("div");
         avatar.className = "w-10 h-10 shrink-0 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex items-center justify-center shadow-sm";
         avatar.innerHTML = `<span class="material-symbols-outlined text-primary">smart_toy</span>`;
+        
         const content = document.createElement("div");
         content.className = "flex flex-col gap-1 w-full max-w-[85%]";
+        
         const cardWrapper = document.createElement("div");
         cardWrapper.className = "w-full";
-        const template = document.getElementById(templateId);
-        cardWrapper.appendChild(template.content.cloneNode(true));
+        cardWrapper.appendChild(contentNode);
+        
         content.appendChild(cardWrapper);
         wrapper.appendChild(avatar);
         wrapper.appendChild(content);
+        
         chatMessages.appendChild(wrapper);
     };
 
@@ -246,26 +339,50 @@
         mainContent.scrollTop = mainContent.scrollHeight;
     };
 
+    // Step 4: Loading State & Handle Input
     const handleInput = (value) => {
         const trimmed = value.trim();
-        if (!templateMap[trimmed]) {
-            return;
-        }
+        if (!trimmed) return;
+
         showChat();
         addUserMessage(trimmed);
-        addAssistantTemplate(templateMap[trimmed]);
         requestAnimationFrame(scrollToBottom);
+
+        // Show Loading
+        const loadingTemplate = document.getElementById("template-loading");
+        const loadingContent = loadingTemplate.content.cloneNode(true);
+        // We need a wrapper to easily remove it
+        const loadingWrapper = document.createElement("div");
+        loadingWrapper.appendChild(loadingContent);
+        chatMessages.appendChild(loadingWrapper);
+        requestAnimationFrame(scrollToBottom);
+
+        setTimeout(() => {
+            loadingWrapper.remove();
+            
+            const response = mockAgentResponse(trimmed);
+            const cardContent = renderCard(response);
+            addAssistantMessage(cardContent);
+            
+            requestAnimationFrame(scrollToBottom);
+        }, 1500);
     };
 
     const loadStateFromQuery = () => {
         const params = new URLSearchParams(window.location.search);
         const state = params.get("state");
-        if (!state || !templateMap[state]) {
-            return;
-        }
+        if (!state) return;
+
+        // Restore state immediately without loading delay
+        const response = mockAgentResponse(state);
+        
+        // Only restore valid states
+        if (response.template === "error") return;
+
         showChat();
         addUserMessage(state);
-        addAssistantTemplate(templateMap[state]);
+        const cardContent = renderCard(response);
+        addAssistantMessage(cardContent);
         requestAnimationFrame(scrollToBottom);
     };
 
