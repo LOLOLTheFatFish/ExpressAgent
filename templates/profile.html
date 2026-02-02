@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Profile - AI App</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3B82F6",
+                        "background-light": "#FAFAFA",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .ethereal-shadow {
+            box-shadow: 0 20px 50px rgba(59, 130, 246, 0.15);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#111418] dark:text-white h-screen overflow-hidden flex flex-col">
+<div class="relative flex h-full w-full flex-col max-w-md mx-auto bg-background-light dark:bg-background-dark shadow-2xl overflow-hidden">
+<div class="flex-1 flex flex-col items-center pt-20 px-6 w-full overflow-y-auto no-scrollbar pb-24">
+<div class="mb-8 relative group">
+<div class="absolute inset-0 bg-blue-400 blur-3xl opacity-20 rounded-full group-hover:opacity-30 transition-opacity"></div>
+<div class="relative w-40 h-40 ethereal-shadow rounded-full p-1 bg-gradient-to-tr from-blue-100 via-white to-blue-50 dark:from-blue-900/40 dark:to-[#1a222e]">
+<div class="w-full h-full rounded-full bg-center bg-no-repeat bg-cover overflow-hidden" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB2pyueGaNYfMC4fnx2H_BcnVYsjn5PapFHmIGeeiKtEEX-YMIdtWQwmYzfcWV8gYY7nn8QbfeATxH1TcEJpXr2kH7ao6705SVP-I_Dsu9xkSDllKSwNsicfVW2YSavkUr2sMJcKZF1cxgiLBKraIT_ot-bcsv3Kksn9XYEqv1Y69CBURGVCW_8DSdXM8em0ShzvjjM3IMReLwHJramhjzcfaUrJLTY_1REyvyvVsl1QBDLxzNDkHk-w_u9rTWfrfwjLBoFYJLyxyI");'>
+</div>
+</div>
+</div>
+<div class="flex flex-col items-center gap-2 mb-12">
+<div class="flex items-center gap-3">
+<h1 class="text-[#111418] dark:text-white tracking-tight text-[32px] font-bold leading-tight">
+                        Alex Rivera
+                    </h1>
+<span class="inline-flex items-center rounded-full bg-blue-50 dark:bg-blue-900/30 px-3 py-1 text-xs font-semibold text-primary ring-1 ring-inset ring-blue-700/10">
+                        Freshman
+                    </span>
+</div>
+<p class="text-sm text-[#617389] dark:text-gray-400 font-medium">User ID: 8829</p>
+</div>
+<div class="w-full">
+<div class="bg-white dark:bg-[#1a222e] rounded-xl p-6 shadow-[0_4px_20px_rgba(0,0,0,0.03)] border border-gray-100 dark:border-gray-800">
+<div class="flex items-center justify-between group cursor-pointer">
+<div class="flex items-center gap-4">
+<div class="flex h-12 w-12 items-center justify-center rounded-full bg-blue-50 dark:bg-blue-900/20">
+<span class="material-symbols-outlined text-primary text-[24px]">shield_person</span>
+</div>
+<div class="flex flex-col">
+<span class="text-base font-bold text-[#111418] dark:text-white">Review Privacy Settings</span>
+<span class="text-xs text-[#617389] dark:text-gray-400">Manage your data and account security</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-gray-300 dark:text-gray-600 group-hover:text-primary transition-colors">chevron_right</span>
+</div>
+</div>
+<p class="mt-6 text-center text-xs text-[#617389] dark:text-gray-500 px-10 leading-relaxed">
+                    Your data is encrypted and stored locally. You have full ownership of your chat history and preferences.
+                </p>
+</div>
+</div>
+<div class="w-full bg-white dark:bg-[#1a222e] border-t border-gray-100 dark:border-gray-800 pb-8 pt-3 px-6 shadow-[0_-4px_16px_rgba(0,0,0,0.02)] z-30">
+<div class="grid grid-cols-3 items-center justify-between">
+<a href="chat.html" class="flex flex-col items-center gap-1 text-[#617389] hover:text-[#111418] dark:hover:text-white transition-colors">
+<div class="py-1 px-4">
+<span class="material-symbols-outlined">search</span>
+</div>
+<span class="text-xs font-medium">Search</span>
+</a>
+<a href="history.html" class="flex flex-col items-center gap-1 text-[#617389] hover:text-[#111418] dark:hover:text-white transition-colors">
+<div class="py-1 px-4">
+<span class="material-symbols-outlined">history</span>
+</div>
+<span class="text-xs font-medium">History</span>
+</a>
+<button class="flex flex-col items-center gap-1 group">
+<div class="bg-blue-50 dark:bg-blue-900/20 px-4 py-1 rounded-full transition-colors">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">person</span>
+</div>
+<span class="text-xs font-bold text-[#111418] dark:text-white">Profile</span>
+</button>
+</div>
+</div>
+</div>
+
+</body></html>

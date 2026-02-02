@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Package Search Home</title>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#3182ed",
+                        "background-light": "#f6f7f8",
+                        "background-dark": "#101822",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-[#111418] dark:text-white h-screen overflow-hidden flex flex-col">
+<div class="relative flex h-full w-full flex-col max-w-md mx-auto bg-background-light dark:bg-background-dark shadow-2xl overflow-hidden">
+<div class="px-4 pt-12 pb-4 z-20 animate-fade-in-down transition-all duration-500 ease-out">
+<div class="flex items-center justify-between gap-3 rounded-full bg-white dark:bg-[#1a222e] p-2 pl-4 shadow-[0_8px_16px_rgba(0,0,0,0.08)] border border-white/50 dark:border-gray-700">
+<div class="flex items-center gap-3 overflow-hidden">
+<span class="material-symbols-outlined text-primary text-[24px]">content_paste</span>
+<div class="flex flex-col min-w-0">
+<p class="text-sm font-bold text-[#111418] dark:text-white truncate">Clipboard Detected</p>
+<p class="text-xs text-[#617389] dark:text-gray-400 truncate">Pickup code found</p>
+</div>
+</div>
+<button class="flex shrink-0 cursor-pointer items-center justify-center overflow-hidden rounded-full h-8 px-4 bg-primary text-white text-xs font-bold leading-normal shadow-md hover:bg-blue-600 transition-colors">
+                    Analyze
+                </button>
+</div>
+</div>
+<main id="mainContent" class="flex-1 flex flex-col w-full overflow-y-auto no-scrollbar">
+<section id="searchView" class="flex-1 flex flex-col items-center justify-center px-6 pb-24">
+<div class="mb-6 relative group">
+<div class="absolute inset-0 bg-blue-400 blur-2xl opacity-20 rounded-full group-hover:opacity-30 transition-opacity"></div>
+<div class="relative w-32 h-32 bg-center bg-no-repeat bg-contain" data-alt="Minimalist 3D blue package illustration icon" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB2pyueGaNYfMC4fnx2H_BcnVYsjn5PapFHmIGeeiKtEEX-YMIdtWQwmYzfcWV8gYY7nn8QbfeATxH1TcEJpXr2kH7ao6705SVP-I_Dsu9xkSDllKSwNsicfVW2YSavkUr2sMJcKZF1cxgiLBKraIT_ot-bcsv3Kksn9XYEqv1Y69CBURGVCW_8DSdXM8em0ShzvjjM3IMReLwHJramhjzcfaUrJLTY_1REyvyvVsl1QBDLxzNDkHk-w_u9rTWfrfwjLBoFYJLyxyI"); border-radius: 999px;'>
+</div>
+</div>
+<h1 class="text-[#111418] dark:text-white tracking-tight text-[32px] font-bold leading-tight text-center mb-10">
+                Package Search
+            </h1>
+<div class="w-full flex flex-col gap-5">
+<div class="relative w-full group">
+<input id="searchInput" class="block w-full rounded-full border-0 py-4 pl-6 pr-24 text-[#111418] dark:text-white bg-white dark:bg-[#1a222e] shadow-[0_2px_8px_rgba(0,0,0,0.04)] ring-1 ring-inset ring-gray-200 dark:ring-gray-700 placeholder:text-[#617389] focus:ring-2 focus:ring-inset focus:ring-primary sm:text-base sm:leading-6 transition-all" placeholder="输入 1/2/3 并回车" type="text"/>
+<div class="absolute inset-y-0 right-0 pr-4 flex items-center gap-3">
+<div class="flex items-center justify-center p-1 pointer-events-none">
+<span class="material-symbols-outlined text-primary text-[24px]" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<button class="p-1 text-[#617389] hover:text-primary transition-colors rounded-full hover:bg-gray-100 dark:hover:bg-gray-800 flex items-center justify-center" type="button">
+<span class="material-symbols-outlined text-[24px]">photo_camera</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<section id="chatView" class="hidden flex-1 flex flex-col px-4 pt-4 pb-24">
+<div class="flex justify-center my-2">
+<span class="text-xs font-medium text-gray-400 bg-gray-200/60 dark:bg-gray-800/60 px-3 py-1 rounded-full">Today</span>
+</div>
+<div id="chatMessages" class="flex flex-col gap-4"></div>
+</section>
+</main>
+<div id="chatComposer" class="hidden w-full bg-background-light dark:bg-background-dark border-t border-gray-100 dark:border-gray-800 px-4 py-3">
+<div class="relative flex items-center">
+<input id="chatInput" class="w-full bg-white dark:bg-[#1a222e] border-none ring-1 ring-gray-200 dark:ring-gray-700 rounded-full py-3.5 pl-5 pr-12 text-sm focus:ring-2 focus:ring-primary shadow-sm placeholder-[#617389] dark:placeholder-gray-500 text-[#111418] dark:text-white transition-shadow" placeholder="输入 1/2/3 模拟回复" type="text"/>
+<button id="chatSend" class="absolute right-2 p-2 bg-primary text-white rounded-full hover:bg-blue-600 transition-colors flex items-center justify-center" type="button">
+<span class="material-symbols-outlined text-xl">arrow_upward</span>
+</button>
+</div>
+</div>
+<div class="w-full bg-white dark:bg-[#1a222e] border-t border-gray-100 dark:border-gray-800 pb-8 pt-3 px-6 shadow-[0_-4px_16px_rgba(0,0,0,0.02)] z-30 sticky bottom-0">
+<div class="grid grid-cols-3 items-center justify-between">
+<button class="flex flex-col items-center gap-1 group" type="button">
+<div class="bg-blue-50 dark:bg-blue-900/20 px-4 py-1 rounded-full transition-colors">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">search</span>
+</div>
+<span class="text-xs font-bold text-[#111418] dark:text-white">Search</span>
+</button>
+<a href="history.html" class="flex flex-col items-center gap-1 text-[#617389] hover:text-[#111418] dark:hover:text-white transition-colors">
+<div class="py-1 px-4">
+<span class="material-symbols-outlined">history</span>
+</div>
+<span class="text-xs font-medium">History</span>
+</a>
+<a href="profile.html" class="flex flex-col items-center gap-1 text-[#617389] hover:text-[#111418] dark:hover:text-white transition-colors">
+<div class="py-1 px-4">
+<span class="material-symbols-outlined">person</span>
+</div>
+<span class="text-xs font-medium">Profile</span>
+</a>
+</div>
+</div>
+</div>
+<template id="template-normal">
+<a href="detail_normal.html?from=1" class="block">
+<div class="bg-white dark:bg-gray-800 rounded-2xl shadow-md border border-gray-100 dark:border-gray-700 overflow-hidden">
+<div class="px-4 py-3 flex items-center gap-2 bg-blue-50 dark:bg-blue-900/20 border-b border-blue-100 dark:border-blue-900/30">
+<span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="text-blue-900 dark:text-blue-200 text-sm font-semibold">正常取件</span>
+</div>
+<div class="px-5 py-6 flex flex-col items-center justify-center text-center bg-white dark:bg-gray-800">
+<div class="text-primary tracking-tight text-[42px] font-black leading-none mb-1">8-2-3011</div>
+<p class="text-gray-500 dark:text-gray-400 text-xs font-medium uppercase tracking-widest mt-2">取件码</p>
+</div>
+<div class="relative w-full h-28 bg-gray-200">
+<div class="w-full h-full bg-center bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCcJLbuntMe7u8qtIB_M1T2HTRlwPGW18vXa7Q-NO9zCdO3p6Fd2WdkBWlK63j7LdXsEW-4c6697xdzGCOYnzkE5D4gRfZ6oHDNQ4B8G43tOIGRa71_hG76h4Umosthc-pFB8mirGl2JIOjIKnOw3UnJvlCkBvFKnZBGKBorCW6GBjcx5-ONsgZCYn7ttx3TjjvlMBhi8FxTUYXz0VgY0wUxYjfBxiiJspKbYRdNvJ67kiQaKfu7VmsWJMU5vqYgLf64xZluBAwosM");'></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-red-500 text-4xl" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+</div>
+</div>
+</a>
+</template>
+<template id="template-closed">
+<a href="detail_closed.html?from=2" class="block">
+<div class="bg-white dark:bg-gray-800 rounded-2xl shadow-md border border-gray-100 dark:border-gray-700 overflow-hidden">
+<div class="px-4 py-3 flex items-center gap-2 bg-yellow-50 dark:bg-yellow-900/20 border-b border-yellow-100 dark:border-yellow-900/30">
+<span class="material-symbols-outlined text-yellow-600 text-lg" style="font-variation-settings: 'FILL' 1;">warning</span>
+<span class="text-yellow-900 dark:text-yellow-200 text-sm font-semibold">驿站已关门</span>
+</div>
+<div class="px-5 py-6 flex flex-col items-center justify-center text-center bg-white dark:bg-gray-800">
+<div class="text-yellow-500 dark:text-yellow-400 tracking-tight text-[42px] font-black leading-none mb-1">8-2-3011</div>
+<p class="text-gray-500 dark:text-gray-400 text-xs font-medium uppercase tracking-widest mt-2">取件码</p>
+</div>
+<div class="relative w-full h-28 bg-gray-200">
+<div class="w-full h-full bg-center bg-cover" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCcJLbuntMe7u8qtIB_M1T2HTRlwPGW18vXa7Q-NO9zCdO3p6Fd2WdkBWlK63j7LdXsEW-4c6697xdzGCOYnzkE5D4gRfZ6oHDNQ4B8G43tOIGRa71_hG76h4Umosthc-pFB8mirGl2JIOjIKnOw3UnJvlCkBvFKnZBGKBorCW6GBjcx5-ONsgZCYn7ttx3TjjvlMBhi8FxTUYXz0VgY0wUxYjfBxiiJspKbYRdNvJ67kiQaKfu7VmsWJMU5vqYgLf64xZluBAwosM");'></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-red-500 text-4xl" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+</div>
+</div>
+</a>
+</template>
+<template id="template-error">
+<div class="bg-white dark:bg-gray-800 rounded-2xl rounded-tl-sm border border-gray-100 dark:border-gray-700 overflow-hidden flex flex-col support-card-shadow">
+<div class="px-6 py-8 flex flex-col items-center justify-center text-center">
+<div class="w-24 h-24 mb-6 relative flex items-center justify-center bg-orange-50 dark:bg-orange-900/10 rounded-full">
+<div class="absolute inset-0 bg-orange-100/50 dark:bg-orange-800/20 blur-xl rounded-full"></div>
+<span class="material-symbols-outlined text-6xl text-orange-400 icon-filled relative z-10">inventory_2</span>
+<div class="absolute -top-1 -right-1 bg-white dark:bg-gray-800 rounded-full p-1 shadow-sm border border-orange-50">
+<span class="material-symbols-outlined text-2xl text-orange-500 icon-filled">help</span>
+</div>
+</div>
+<h3 class="text-gray-900 dark:text-white text-xl font-bold tracking-tight mb-2">Package Missing?</h3>
+<p class="text-gray-500 dark:text-gray-400 text-sm font-normal leading-relaxed mb-4">We can help you locate it.</p>
+</div>
+<div class="px-5 pb-6 flex flex-col gap-2.5">
+<button class="w-full py-3.5 px-4 bg-primary text-white text-[15px] font-semibold rounded-xl hover:bg-blue-600 transition-colors shadow-md shadow-blue-200/50 dark:shadow-none" type="button">
+                                Call Support
+                            </button>
+<button class="w-full py-3.5 px-4 bg-white dark:bg-transparent text-gray-600 dark:text-gray-300 text-[15px] font-semibold rounded-xl border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors" type="button">
+                                Report Issue
+                            </button>
+</div>
+</div>
+</template>
+<script>
+    const searchInput = document.getElementById("searchInput");
+    const chatInput = document.getElementById("chatInput");
+    const chatSend = document.getElementById("chatSend");
+    const searchView = document.getElementById("searchView");
+    const chatView = document.getElementById("chatView");
+    const chatMessages = document.getElementById("chatMessages");
+    const chatComposer = document.getElementById("chatComposer");
+    const mainContent = document.getElementById("mainContent");
+
+    const templateMap = {
+        "1": "template-normal",
+        "2": "template-closed",
+        "3": "template-error"
+    };
+
+    const showChat = () => {
+        if (!chatView.classList.contains("hidden")) {
+            return;
+        }
+        searchView.classList.add("hidden");
+        chatView.classList.remove("hidden");
+        chatComposer.classList.remove("hidden");
+    };
+
+    const addUserMessage = (text) => {
+        const wrapper = document.createElement("div");
+        wrapper.className = "flex items-end gap-3 justify-end";
+        wrapper.innerHTML = `
+            <div class="flex flex-col gap-1 items-end max-w-[80%]">
+                <div class="px-4 py-3 rounded-2xl rounded-tr-sm bg-primary text-white shadow-sm text-sm">${text}</div>
+                <span class="text-[11px] text-gray-400 font-medium mr-1">You</span>
+            </div>
+            <div class="w-8 h-8 shrink-0 rounded-full bg-blue-100 dark:bg-blue-900/40 flex items-center justify-center border border-white dark:border-gray-700 shadow-sm">
+                <span class="material-symbols-outlined text-primary text-lg">person</span>
+            </div>
+        `;
+        chatMessages.appendChild(wrapper);
+    };
+
+    const addAssistantTemplate = (templateId) => {
+        const wrapper = document.createElement("div");
+        wrapper.className = "flex gap-3 items-start w-full";
+        const avatar = document.createElement("div");
+        avatar.className = "w-10 h-10 shrink-0 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 flex items-center justify-center shadow-sm";
+        avatar.innerHTML = `<span class="material-symbols-outlined text-primary">smart_toy</span>`;
+        const content = document.createElement("div");
+        content.className = "flex flex-col gap-1 w-full max-w-[85%]";
+        const cardWrapper = document.createElement("div");
+        cardWrapper.className = "w-full";
+        const template = document.getElementById(templateId);
+        cardWrapper.appendChild(template.content.cloneNode(true));
+        content.appendChild(cardWrapper);
+        wrapper.appendChild(avatar);
+        wrapper.appendChild(content);
+        chatMessages.appendChild(wrapper);
+    };
+
+    const scrollToBottom = () => {
+        mainContent.scrollTop = mainContent.scrollHeight;
+    };
+
+    const handleInput = (value) => {
+        const trimmed = value.trim();
+        if (!templateMap[trimmed]) {
+            return;
+        }
+        showChat();
+        addUserMessage(trimmed);
+        addAssistantTemplate(templateMap[trimmed]);
+        requestAnimationFrame(scrollToBottom);
+    };
+
+    const loadStateFromQuery = () => {
+        const params = new URLSearchParams(window.location.search);
+        const state = params.get("state");
+        if (!state || !templateMap[state]) {
+            return;
+        }
+        showChat();
+        addUserMessage(state);
+        addAssistantTemplate(templateMap[state]);
+        requestAnimationFrame(scrollToBottom);
+    };
+
+    searchInput.addEventListener("keydown", (event) => {
+        if (event.key !== "Enter") {
+            return;
+        }
+        event.preventDefault();
+        handleInput(searchInput.value);
+        searchInput.value = "";
+    });
+
+    chatInput.addEventListener("keydown", (event) => {
+        if (event.key !== "Enter") {
+            return;
+        }
+        event.preventDefault();
+        handleInput(chatInput.value);
+        chatInput.value = "";
+    });
+
+    chatSend.addEventListener("click", () => {
+        handleInput(chatInput.value);
+        chatInput.value = "";
+    });
+
+    loadStateFromQuery();
+</script>
+</body>
+</html>
+
+
