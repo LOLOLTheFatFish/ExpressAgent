@@ -1,0 +1,43 @@
+<view class="container">
+  <view class="nav-bar">
+    <view class="back-btn" bindtap="goBack"><text>←</text></view>
+    <text class="nav-title">Pickup Ready</text>
+    <view class="nav-right">...</view>
+  </view>
+
+  <scroll-view scroll-y class="content">
+    <view class="code-section">
+      <text class="pickup-code {{type === 'closed' ? 'text-yellow' : 'text-blue'}}">{{code}}</text>
+      <view class="status-badge {{type === 'closed' ? 'bg-yellow' : 'bg-blue'}}">
+        <text>{{status}}</text>
+      </view>
+    </view>
+
+    <view class="info-card">
+      <view class="map-area">
+        <image src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2pyueGaNYfMC4fnx2H_BcnVYsjn5PapFHmIGeeiKtEEX-YMIdtWQwmYzfcWV8gYY7nn8QbfeATxH1TcEJpXr2kH7ao6705SVP-I_Dsu9xkSDllKSwNsicfVW2YSavkUr2sMJcKZF1cxgiLBKraIT_ot-bcsv3Kksn9XYEqv1Y69CBURGVCW_8DSdXM8em0ShzvjjM3IMReLwHJramhjzcfaUrJLTY_1REyvyvVsl1QBDLxzNDkHk-w_u9rTWfrfwjLBoFYJLyxyI" mode="aspectFill" class="map-img"></image>
+        <view class="map-overlay">
+            <view class="live-tag"><view class="dot"></view> Live View</view>
+        </view>
+      </view>
+      
+      <view class="card-details">
+        <view class="station-info">
+          <text class="station-name">Cai Niao Station</text>
+          <text class="station-addr">North Campus Gate, Blue Shed #2</text>
+        </view>
+        <view class="distance-badge">200m</view>
+      </view>
+
+      <view class="action-buttons">
+        <button class="btn-navigate">Navigate</button>
+        <button class="btn-call">📞</button>
+      </view>
+    </view>
+
+    <view class="tips-box">
+      <text class="tips-icon">💡</text>
+      <text class="tips-text">Inside the warehouse, turn right after entering and walk straight in.</text>
+    </view>
+  </scroll-view>
+</view>
